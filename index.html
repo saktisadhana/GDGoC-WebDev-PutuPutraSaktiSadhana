@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Halaman pendaftaran GDGOC ITS Hands-On - event belajar HTML, CSS, dan JavaScript bersama.">
+    <title>GDGOC ITS - Hands On Web Dev</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-text">GDGOC <strong>ITS</strong></span>
+            </div>
+            <nav class="nav">
+                <a href="#about">Tentang</a>
+                <a href="#topics">Materi</a>
+                <a href="#daftar">Daftar</a>
+            </nav>
+            <button id="btn-darkmode" class="btn-darkmode" aria-label="Toggle dark mode">
+                <span id="darkmode-icon">dark</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-text">
+                <p class="hero-label">Google Developer Groups on Campus</p>
+                <h1>Hands-On<br><span>Web Development</span></h1>
+                <p class="hero-desc">Workshop satu hari buat kamu yang mau mulai belajar bikin website dari nol, mulai dari HTML, CSS, sampai JavaScript.</p>
+                <a href="#daftar" class="btn-primary">Daftar Sekarang</a>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="code-block">
+                    <div class="code-line"><span class="c-tag">&lt;div</span> <span class="c-attr">class</span>=<span class="c-val">"kamu"</span><span class="c-tag">&gt;</span></div>
+                    <div class="code-line indent"><span class="c-tag">&lt;p</span><span class="c-tag">&gt;</span><span class="c-text">Full Stack someday</span><span class="c-tag">&lt;/p&gt;</span></div>
+                    <div class="code-line"><span class="c-tag">&lt;/div&gt;</span></div>
+                    <div class="code-cursor">|</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section" id="about">
+            <h2 class="section-title">Tentang Event</h2>
+            <div class="about-grid">
+                <div class="info-card">
+                    <h3>Tanggal</h3>
+                    <p>Sabtu, 26 April 2026</p>
+                </div>
+                <div class="info-card">
+                    <h3>Tempat</h3>
+                    <p>Gedung Teknik Informatika, ITS Surabaya</p>
+                </div>
+                <div class="info-card">
+                    <h3>Waktu</h3>
+                    <p>08.00 - 17.00 WIB</p>
+                </div>
+                <div class="info-card">
+                    <h3>Peserta</h3>
+                    <p>Terbuka untuk mahasiswa ITS (maks. 50 orang)</p>
+                </div>
+            </div>
+            <div class="about-desc">
+                <p>
+                    GDGOC ITS Hands-On Web Dev adalah workshop intensif sehari penuh yang dirancang buat mahasiswa yang belum punya pengalaman coding atau baru mulai belajar. Kamu bakal diajarin langsung oleh kakak-kakak senior yang udah aktif di industri.
+                </p>
+                <p>
+                    Di akhir acara, setiap peserta diharapkan berhasil membangun satu halaman web sederhana dari awal - beneran dari nol, bukan template.
+                </p>
+            </div>
+        </section>
+
+        <!-- Topics -->
+        <section class="section section-alt" id="topics">
+            <h2 class="section-title">Materi yang Dibahas</h2>
+            <div class="topics-list">
+                <div class="topic-item">
+                    <div class="topic-num">01</div>
+                    <div class="topic-content">
+                        <h3>HTML – Struktur & Semantik</h3>
+                        <p>Belajar elemen-elemen dasar HTML, semantic tags, dan cara menyusun struktur halaman yang bersih dan mudah di-maintain.</p>
+                    </div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-num">02</div>
+                    <div class="topic-content">
+                        <h3>CSS – Layout & Styling</h3>
+                        <p>Dari selector dasar sampai Flexbox dan Grid. Cara bikin halaman yang enak dilihat tanpa framework apa-apa.</p>
+                    </div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-num">03</div>
+                    <div class="topic-content">
+                        <h3>JavaScript – DOM & Interaktivitas</h3>
+                        <p>Event listener, manipulasi DOM, fungsi, dan gimana cara bikin halaman web yang bisa "merespon" input pengguna.</p>
+                    </div>
+                </div>
+                <div class="topic-item">
+                    <div class="topic-num">04</div>
+                    <div class="topic-content">
+                        <h3>Mini Project – Build Your Own Page</h3>
+                        <p>Sesi guided coding di mana kamu build halaman sendiri dari scratch dengan bantuan mentor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Form -->
+        <section class="section" id="daftar">
+            <h2 class="section-title">Form Pendaftaran</h2>
+            <p class="section-sub">Isi form di bawah untuk mendaftar. Pendaftaran gratis, kursi terbatas.</p>
+
+            <form id="registration-form" class="reg-form" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap <span class="req">*</span></label>
+                        <input id="name" name="name" type="text" placeholder="Nama kamu..." autocomplete="name">
+                        <span class="field-error" id="err-name"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="nrp">NRP <span class="req">*</span></label>
+                        <input id="nrp" name="nrp" type="text" placeholder="5025XXXXXXX">
+                        <span class="field-error" id="err-nrp"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email <span class="req">*</span></label>
+                    <input id="email" name="email" type="email" placeholder="email@student.its.ac.id" autocomplete="email">
+                    <span class="field-error" id="err-email"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="dept">Departemen</label>
+                    <input id="dept" name="dept" type="text" placeholder="Contoh: Teknik Informatika">
+                </div>
+
+                <div class="form-group">
+                    <label for="level">Pengalaman Coding</label>
+                    <select id="level" name="level">
+                        <option value="">-- Pilih level --</option>
+                        <option value="nol">Belum pernah sama sekali</option>
+                        <option value="beginner">Pernah tapi dikit (SMA / otodidak)</option>
+                        <option value="intermediate">Sudah lumayan (kuliah / kursus)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="motivation">Motivasi ikut (opsional)</label>
+                    <textarea id="motivation" name="motivation" rows="3" placeholder="Ceritain kenapa kamu mau ikut event ini..."></textarea>
+                </div>
+
+                <div class="form-check">
+                    <label class="check-label">
+                        <input id="join-wa" name="join-wa" type="checkbox">
+                        <span class="check-box"></span>
+                        Saya mau bergabung ke grup WhatsApp peserta
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <label class="check-label">
+                        <input id="agree" name="agree" type="checkbox">
+                        <span class="check-box"></span>
+                        Saya menyatakan data yang di isi adalah benar <span class="req">*</span>
+                    </label>
+                    <span class="field-error" id="err-agree"></span>
+                </div>
+
+                <button type="submit" class="btn-submit" id="btn-submit">Kirim Pendaftaran</button>
+            </form>
+
+            <!-- Success message (hidden by default) -->
+            <div id="success-msg" class="success-msg" hidden>
+                <h3>Pendaftaran Berhasil</h3>
+                <p id="success-text"></p>
+                <button id="btn-reset" class="btn-primary">Daftar Lagi</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span>GDGOC ITS</span>
+            </div>
+            <p class="footer-note">Google Developer Groups on Campus | Institut Teknologi Sepuluh Nopember</p>
+            <p class="footer-copy">&copy; 2026 GDGOC ITS. Dibuat untuk keperluan tugas.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
